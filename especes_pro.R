@@ -243,7 +243,13 @@ limites_idf |>
 
 sp_pro |>
   dplyr::filter(geometry_type == "POINT") |>
-  dplyr::select(observateur, date, code_ref, stade_vie, url_obs, CLASSE, ORDRE, FAMILLE, ESPECE) |>
+  dplyr::mutate(
+    date = lubridate::as_date(date),
+    label = paste0(
+      ESPECE, ' (', code_ref, ')<hr>', lubridate::as_date(date), '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
+    )
+  ) |>
+  dplyr::select(code_ref, date, label) |>
   sf::st_transform(crs = 4326) |>
   dplyr::group_by(code_ref) |>
   dplyr::group_split() |>
@@ -258,7 +264,7 @@ sp_pro |>
     .progress = TRUE
   )
 
-if(dir.exists("_site")) unlink("_site", recursive = TRUE)
+if(dir.exists("docs")) unlink("docs", recursive = TRUE)
 file.copy(from = "fiches/_site", to = ".", recursive = TRUE)
 file.rename("_site", "docs")
 unlink("fiches/_site", recursive = TRUE)

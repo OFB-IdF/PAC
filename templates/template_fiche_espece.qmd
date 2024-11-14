@@ -105,12 +105,20 @@ leaflet::leaflet() |>
       // Ajouter les points filtrés à la carte avec un style de point
       L.geoJSON(data, {
         pointToLayer: function(feature, latlng) {
-          return L.circleMarker(latlng, {
+          var marker = L.circleMarker(latlng, {
             radius: 5,         // Taille du marqueur
             color: "blue",     // Couleur de bordure
             fillColor: "blue", // Couleur de remplissage
             fillOpacity: 0.8   // Opacité du remplissage
           });
+          
+          // Ajouter infobulle au survol
+          marker.bindTooltip(feature.properties.date);
+          
+          // Ajouter une popup au clic
+          marker.bindPopup(feature.properties.label);
+          
+          return marker;
         }
       }).addTo(map);
     })
