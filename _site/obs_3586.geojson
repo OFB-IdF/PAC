@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "obs_3586",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "observateur": "Marmet Nicolas", "date": "2022-07-16T00:00:00Z", "code_ref": 3586.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/2302933", "CLASSE": "Aves", "ORDRE": "Coraciiformes", "FAMILLE": "Coraciidae", "ESPECE": "Coracias garrulus" }, "geometry": { "type": "Point", "coordinates": [ 3.0192232131958, 48.962264854867293 ] } },
+{ "type": "Feature", "properties": { "observateur": "Marmet Nicolas", "date": "2022-07-15T00:00:00Z", "code_ref": 3586.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/2302960", "CLASSE": "Aves", "ORDRE": "Coraciiformes", "FAMILLE": "Coraciidae", "ESPECE": "Coracias garrulus" }, "geometry": { "type": "Point", "coordinates": [ 3.018944263458251, 48.963631387868197 ] } },
+{ "type": "Feature", "properties": { "observateur": "Marmet Nicolas", "date": "2022-07-18T00:00:00Z", "code_ref": 3586.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/2302921", "CLASSE": "Aves", "ORDRE": "Coraciiformes", "FAMILLE": "Coraciidae", "ESPECE": "Coracias garrulus" }, "geometry": { "type": "Point", "coordinates": [ 3.01875114440918, 48.962969257997493 ] } },
+{ "type": "Feature", "properties": { "observateur": "antoinekita", "date": "2022-07-17T00:00:00Z", "code_ref": 3586.0, "stade_vie": null, "url_obs": "https://openobs.mnhn.fr/redirect/sinp/occurrences/c7a4f2ae-4db5-4afc-af4f-c1f94201726e", "CLASSE": "Aves", "ORDRE": "Coraciiformes", "FAMILLE": "Coraciidae", "ESPECE": "Coracias garrulus" }, "geometry": { "type": "Point", "coordinates": [ 3.01948, 48.96424 ] } }
+]
+}

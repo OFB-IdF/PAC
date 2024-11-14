@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "obs_60537",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "observateur": "Birard Julien", "date": "2014-09-26T00:00:00Z", "code_ref": 60537.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/80419", "CLASSE": "Mammalia", "ORDRE": "Chiroptera", "FAMILLE": "Vespertilionidae", "ESPECE": "Vespertilio murinus" }, "geometry": { "type": "Point", "coordinates": [ 2.324226, 48.855448 ] } },
+{ "type": "Feature", "properties": { "observateur": "JULIEN Jean-François", "date": "2014-03-15T00:00:00Z", "code_ref": 60537.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/142702", "CLASSE": "Mammalia", "ORDRE": "Chiroptera", "FAMILLE": "Vespertilionidae", "ESPECE": "Vespertilio murinus" }, "geometry": { "type": "Point", "coordinates": [ 2.335985, 48.861581 ] } },
+{ "type": "Feature", "properties": { "observateur": "Zucca Maxime", "date": "2014-09-26T00:00:00Z", "code_ref": 60537.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/80430", "CLASSE": "Mammalia", "ORDRE": "Chiroptera", "FAMILLE": "Vespertilionidae", "ESPECE": "Vespertilio murinus" }, "geometry": { "type": "Point", "coordinates": [ 2.322521, 48.838987 ] } }
+]
+}
