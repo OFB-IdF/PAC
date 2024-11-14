@@ -16,22 +16,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install Quarto
-      run: |
-        wget https://quarto.org/download/latest/quarto-linux-amd64.deb
-        sudo dpkg -i quarto-linux-amd64.deb
-
-    - name: Render site
-      run: |
-        quarto render
-
     - name: Set correct permissions for the site directory
       run: sudo chmod -R 755 _site
 
     - name: Move site to docs
       run: |
         rm -rf docs/*
-        mv fiches/_site/* docs/
+        mv _site/* docs/
 
     - name: Commit and push changes
       run: |
