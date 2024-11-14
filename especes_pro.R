@@ -257,3 +257,7 @@ sp_pro |>
     },
     .progress = TRUE
   )
+
+if(dir.exists("_site")) unlink("_site", recursive = TRUE)
+file.copy(from = "fiches/_site", to = ".", recursive = TRUE)
+unlink("fiches/_site", recursive = TRUE)
