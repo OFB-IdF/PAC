@@ -1,0 +1,16 @@
+project:
+  type: website
+website:
+  title: Espèces protégées d'Île-de-France
+  navbar:
+    left:
+    - href: index.qmd
+      text: Accueil
+  sidebar:
+    include: sidebar.yml
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+editor: source
