@@ -271,8 +271,7 @@ sp_pro |>
     label = paste0(
       '<em>', ESPECE, '</em>',
       ifelse(!is.na(nom_francais), paste0(' (', nom_francais, ')'), ''), '<hr>',
-      lubridate::as_date(date), '<br>',
-      observateur, '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
+      observateur, ' (', lubridate::as_date(date), ')<br><a href="', url_obs, '">Lien vers l\'observation</a>'
     )
   ) |>
   dplyr::select(code_ref, date, label) |>
