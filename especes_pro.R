@@ -237,16 +237,21 @@ readLines("fiches/_quarto.yml") |>
 
 quarto::quarto_render(input = "fiches/")
 
+if(dir.exists("docs")) unlink("docs", recursive = TRUE)
+file.copy(from = "fiches/_site", to = ".", recursive = TRUE)
+file.rename("_site", "docs")
+unlink("fiches/_site", recursive = TRUE)
+
 limites_idf |>
   sf::st_transform(crs = 4326) |>
-  sf::st_write("fiches/_site/limites_idf.geojson", delete_dsn = TRUE)
+  sf::st_write("docs/limites_idf.geojson", delete_dsn = TRUE)
 
 sp_pro |>
   dplyr::filter(geometry_type == "POINT") |>
   dplyr::mutate(
     date = lubridate::as_date(date),
     label = paste0(
-      ESPECE, ' (', code_ref, ')<hr>', lubridate::as_date(date), '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
+      ESPECE, ' (', code_ref, ')<hr>', lubridate::as_date(date), '<br>', observateur, '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
     )
   ) |>
   dplyr::select(code_ref, date, label) |>
@@ -257,14 +262,10 @@ sp_pro |>
     function(df) {
       df |>
         sf::st_write(
-          paste0("fiches/_site/obs_", unique(df$code_ref), ".geojson"),
+          paste0("docs/obs_", unique(df$code_ref), ".geojson"),
           delete_dsn = TRUE
         )
     },
     .progress = TRUE
   )
 
-if(dir.exists("docs")) unlink("docs", recursive = TRUE)
-file.copy(from = "fiches/_site", to = ".", recursive = TRUE)
-file.rename("_site", "docs")
-unlink("fiches/_site", recursive = TRUE)
