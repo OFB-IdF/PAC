@@ -3,8 +3,8 @@
 "name": "obs_2869",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2018-06-07", "label": "Aegypius monachus (2869)<hr>2018-06-07<br>Bottinelli Julien<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1132258\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 2.920584, 48.323773 ] } },
-{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2017-06-10", "label": "Aegypius monachus (2869)<hr>2017-06-10<br>Inconnu Inconnu<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/872842\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 3.070618, 48.819476 ] } },
-{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2019-05-06", "label": "Aegypius monachus (2869)<hr>2019-05-06<br>Inconnu Inconnu<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1502516\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 2.984548, 48.829681 ] } }
+{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2018-06-07", "label": "<em>Aegypius monachus</em> (Vautour moine)<hr>2018-06-07<br>Bottinelli Julien<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1132258\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 2.920584, 48.323773 ] } },
+{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2017-06-10", "label": "<em>Aegypius monachus</em> (Vautour moine)<hr>2017-06-10<br>Inconnu Inconnu<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/872842\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 3.070618, 48.819476 ] } },
+{ "type": "Feature", "properties": { "code_ref": 2869.0, "date": "2019-05-06", "label": "<em>Aegypius monachus</em> (Vautour moine)<hr>2019-05-06<br>Inconnu Inconnu<br><a href=\"https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1502516\">Lien vers l'observation</a>" }, "geometry": { "type": "Point", "coordinates": [ 2.984548, 48.829681 ] } }
 ]
 }
