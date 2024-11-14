@@ -138,27 +138,6 @@ limites_idf <- limites_idf |>
 
 save(sp_pro, statuts, limites_idf, habitats, file = "fiches/data.rda")
 
-limites_idf |>
-  sf::st_transform(crs = 4326) |>
-  sf::st_write("fiches/limites_idf.geojson", delete_dsn = TRUE)
-
-sp_pro |>
-  dplyr::filter(geometry_type == "POINT") |>
-  dplyr::select(observateur, date, code_ref, stade_vie, url_obs, CLASSE, ORDRE, FAMILLE, ESPECE) |>
-  sf::st_transform(crs = 4326) |>
-  dplyr::group_by(code_ref) |>
-  dplyr::group_split() |>
-  purrr::walk(
-    function(df) {
-      df |>
-        sf::st_write(
-          paste0("fiches/obs_", unique(df$code_ref), ".geojson"),
-          delete_dsn = TRUE
-        )
-    },
-    .progress = TRUE
-  )
-
 purrr::walk(
   c("logo_inpn.png", "logo_geonatidf.png", "index.qmd"),
   function(x) {
@@ -257,3 +236,24 @@ readLines("fiches/_quarto.yml") |>
   writeLines("fiches/_quarto.yml")
 
 quarto::quarto_render(input = "fiches/")
+
+limites_idf |>
+  sf::st_transform(crs = 4326) |>
+  sf::st_write("fiches/_site/limites_idf.geojson", delete_dsn = TRUE)
+
+sp_pro |>
+  dplyr::filter(geometry_type == "POINT") |>
+  dplyr::select(observateur, date, code_ref, stade_vie, url_obs, CLASSE, ORDRE, FAMILLE, ESPECE) |>
+  sf::st_transform(crs = 4326) |>
+  dplyr::group_by(code_ref) |>
+  dplyr::group_split() |>
+  purrr::walk(
+    function(df) {
+      df |>
+        sf::st_write(
+          paste0("fiches/_site/obs_", unique(df$code_ref), ".geojson"),
+          delete_dsn = TRUE
+        )
+    },
+    .progress = TRUE
+  )
