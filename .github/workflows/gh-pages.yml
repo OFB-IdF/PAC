@@ -17,12 +17,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set correct permissions for the site directory
-      run: sudo chmod -R 755 _site
-
-    - name: Move site to docs
-      run: |
-        rm -rf docs/*
-        mv _site/* docs/
+      run: sudo chmod -R 755 docs
 
     - name: Commit and push changes
       run: |

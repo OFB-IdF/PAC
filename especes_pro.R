@@ -260,4 +260,5 @@ sp_pro |>
 
 if(dir.exists("_site")) unlink("_site", recursive = TRUE)
 file.copy(from = "fiches/_site", to = ".", recursive = TRUE)
+file.rename("_site", "docs")
 unlink("fiches/_site", recursive = TRUE)
