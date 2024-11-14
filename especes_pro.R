@@ -249,9 +249,30 @@ limites_idf |>
 sp_pro |>
   dplyr::filter(geometry_type == "POINT") |>
   dplyr::mutate(
+    nom_francais = NOM |>
+      purrr::map(
+        .f = function(x) {
+          if (!is.na(x)) {
+            x2 <- x |>
+            stringr::str_split_1(pattern = "\\,")
+          x2[1] |>
+            stringr::str_remove_all(pattern = "\\(.*?\\)")
+          } else {
+            NA
+          }
+
+        },
+        .progress = TRUE
+      ) |>
+      purrr::list_c()
+  ) |>
+  dplyr::mutate(
     date = lubridate::as_date(date),
     label = paste0(
-      ESPECE, ' (', code_ref, ')<hr>', lubridate::as_date(date), '<br>', observateur, '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
+      '<em>', ESPECE, '</em>',
+      ifelse(!is.na(nom_francais), paste0(' (', nom_francais, ')'), ''), '<hr>',
+      lubridate::as_date(date), '<br>',
+      observateur, '<br><a href="', url_obs, '">Lien vers l\'observation</a>'
     )
   ) |>
   dplyr::select(code_ref, date, label) |>
