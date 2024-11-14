@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "obs_292",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "observateur": "Garcia Irene", "date": "2019-08-18T00:00:00Z", "code_ref": 292.0, "stade_vie": "Inconnu", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1601051", "CLASSE": "Amphibia", "ORDRE": "Anura", "FAMILLE": "Hylidae", "ESPECE": "Hyla meridionalis" }, "geometry": { "type": "Point", "coordinates": [ 2.387681, 48.854289 ] } },
+{ "type": "Feature", "properties": { "observateur": "LYSIAK Vincent", "date": "2014-02-21T00:00:00Z", "code_ref": 292.0, "stade_vie": "Adulte", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/1452997", "CLASSE": "Amphibia", "ORDRE": "Anura", "FAMILLE": "Hylidae", "ESPECE": "Hyla meridionalis" }, "geometry": { "type": "Point", "coordinates": [ 2.252195, 48.846792 ] } },
+{ "type": "Feature", "properties": { "observateur": "Rivallin Pierre", "date": "2017-02-01T00:00:00Z", "code_ref": 292.0, "stade_vie": "Adulte", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/686265", "CLASSE": "Amphibia", "ORDRE": "Anura", "FAMILLE": "Hylidae", "ESPECE": "Hyla meridionalis" }, "geometry": { "type": "Point", "coordinates": [ 2.519414, 48.702522 ] } },
+{ "type": "Feature", "properties": { "observateur": "Abdola Charlotte", "date": "2021-06-29T00:00:00Z", "code_ref": 292.0, "stade_vie": "Adulte", "url_obs": "https://geonature.arb-idf.fr/geonature/#/synthese/occurrence/2531261", "CLASSE": "Amphibia", "ORDRE": "Anura", "FAMILLE": "Hylidae", "ESPECE": "Hyla meridionalis" }, "geometry": { "type": "Point", "coordinates": [ 2.637741, 48.857547 ] } }
+]
+}
